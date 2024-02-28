@@ -30,3 +30,7 @@
 ## claims
 - Associated with JWT
 - e payload of the JWT,
+
+## jwt with go
+- token,err := jwt.NewWithClaims(jwt.SigningMethodHS256 , claims).SignedString([]byte(SECRET_KEY)
+- 
