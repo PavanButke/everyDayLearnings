@@ -33,4 +33,13 @@
 
 ## jwt with go
 - token,err := jwt.NewWithClaims(jwt.SigningMethodHS256 , claims).SignedString([]byte(SECRET_KEY)
+  
+## bson
 - 
+BSON, which stands for Binary JSON (JavaScript Object Notation), is a binary-encoded serialization of JSON-like documents. It's designed to be lightweight, traversable, and efficient in both storage and data exchange.
+
+` \x1E\x00\x00\x00                        // Total document size: 30 bytes
+\x02                                     // String type
+name\x00                                 // Field name: "name"
+\x09\x00\x00\x00John Doe\x00             // String value: "John Doe"`
+
