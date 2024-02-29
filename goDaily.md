@@ -43,3 +43,30 @@ BSON, which stands for Binary JSON (JavaScript Object Notation), is a binary-enc
 name\x00                                 // Field name: "name"
 \x09\x00\x00\x00John Doe\x00             // String value: "John Doe"`
 
+## context package
+- The Context package in Go provides a way to pass request-scoped values, cancellation signals, and deadlines across API boundaries and between goroutines.
+
+package main
+
+import (
+	"context"
+	"fmt"
+	"time"
+)
+
+`func main() {
+	// Create a new empty context
+	parentCtx := context.Background()
+
+	// Create a child context with a cancellation signal after 1 second
+	childCtx, cancel := context.WithTimeout(parentCtx, time.Second)
+
+	// Ensure the cancel function is called to release resources when finished
+	defer cancel()
+
+	// Use the child context or pass it to functions that support it
+	fmt.Println("Child Context:", childCtx)
+}`
+
+## Generate New Object ID
+- user.ID = primitive.NewObjectID()
