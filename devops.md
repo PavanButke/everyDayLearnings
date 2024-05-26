@@ -65,4 +65,12 @@ setup a branch of git for jenkins deployment
                       - Paste instead of //steps 
                     - 
         - Save the file and click on the play button in the upper right corner to start a new pipeline
-            - 
+  
+  ## 26/05 reverse proxy
+  - running instance using ec2
+  - connecting to aws 
+    - `ssh -i PEM_FILENAME machine_os@ec2-public-ipv4-DNS address`
+  - security of ec2 instance inbound & outbound
+  - `chmod 700 PEM_FILENAME`
+  - setting the docker and aws credentials on github
+  - Write Deploy.yml
